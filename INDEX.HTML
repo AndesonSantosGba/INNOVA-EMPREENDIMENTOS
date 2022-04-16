@@ -1,0 +1,42 @@
+<html>
+<body>
+
+    <script>
+        
+        var NumeroInicial = prompt("Informe seu primeiro número da operação:"); 
+
+        var Operacao = prompt("Informe a Operação matematica desejada:");
+        //Laço de repetição que diz: se o valor informado for diferente das atribuiçoes abaixo, execute o laço de repetição, exiba o alert informando o erro e mande o usuário para
+        //outro prompt para tentar novamente.
+        while (Operacao != "+" && Operacao != "-" && Operacao != "*" && Operacao != "/") {
+            alert('Insira uma Operação válida');
+            Operacao = prompt("Informe a Operação matematica desejada:");
+        }
+
+        var NumeroFinal = prompt("Informe seu segundo número da operação:");
+
+        //Converter o valor informado de String para Numero
+        NumeroInicial = parseInt(NumeroInicial);
+        NumeroFinal = parseInt(NumeroFinal);
+
+        //Defini a variável e dexei em aberto seu valor, para primeiro aplicar as condições
+        var ResultadoFinal = 0;
+
+        if(Operacao == "+"){
+            ResultadoFinal = NumeroInicial+NumeroFinal;
+        }else if(Operacao == "-"){
+            ResultadoFinal = NumeroInicial-NumeroFinal;
+        }else if(Operacao == "*"){
+            ResultadoFinal = NumeroInicial*NumeroFinal;
+        }else if(Operacao == "/"){
+            ResultadoFinal = NumeroInicial/NumeroFinal;
+        }
+
+        alert("O resultado final é: " + ResultadoFinal);    
+
+
+
+    </script>
+</body>
+
+</html>
